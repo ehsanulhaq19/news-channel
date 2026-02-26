@@ -35,4 +35,16 @@ return [
         ],
     ],
 
+    'articles_sources' => [
+        'news_org_end_point' => env('NEWS_ORG_END_POINT'),
+        'news_org_api_key' => env('NEWS_ORG_API_KEY'),
+        
+        'the_guardian_end_point' => env('THE_GUARDIAN_END_POINT'),
+        'the_guardian_api_key' => env('THE_GUARDIAN_API_KEY'),
+        
+        'new_york_times_end_point' => env('NEW_YORK_TIMES_END_POINT'),
+        'new_york_times_api_key' => env('NEW_YORK_TIMES_API_KEY'),
+        'new_york_times_host_url' => env('NEW_YORK_TIMES_HOST_URL'),
+    ]
+
 ];
