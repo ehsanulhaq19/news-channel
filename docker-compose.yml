@@ -64,6 +64,22 @@ services:
     networks:
       - app_network
 
+  news_channel_frontend:
+    container_name: news_channel_frontend
+    build:
+      context: .
+      dockerfile: ./docker/frontend/Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - app_network
+    volumes:
+      - ./frontend:/usr/src/app
+    depends_on:
+      - news_channel_db
+      - news_channel_app
+    tty: true
+
 networks:
   app_network:
     driver: bridge

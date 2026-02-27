@@ -1,0 +1,16 @@
+// Variables
+@use 'variables' as *;
+
+// Components
+@use 'components';
+
+// Layouts
+@use 'layouts';
+
+// Pages
+@use 'pages';
+
+body > #app {
+    max-width: 1920px;
+    margin: auto;
+}
