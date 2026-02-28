@@ -1,4 +1,4 @@
-FROM php:8.2-fpm
+FROM php:8.4-fpm
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
@@ -37,7 +37,7 @@ WORKDIR /usr/src/app
 
 COPY ./backend .
 
-RUN composer install
+RUN composer install --no-interaction
 
 RUN chown -R www-data:www-data storage bootstrap/cache
 RUN chmod -R 755 storage bootstrap/cache

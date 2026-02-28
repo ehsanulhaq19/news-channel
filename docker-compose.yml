@@ -46,7 +46,7 @@ services:
       context: .
       dockerfile: ./docker/db/Dockerfile
     volumes:
-      - ./backend/storage/db-data:/var/lib/mysql
+      - db_data:/var/lib/mysql
     ports:
       - 3308:3306
     environment:
@@ -79,6 +79,9 @@ services:
       - news_channel_db
       - news_channel_app
     tty: true
+
+volumes:
+  db_data:
 
 networks:
   app_network:
